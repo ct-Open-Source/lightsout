@@ -2,8 +2,11 @@
 
 Dies ist eine (programmier)technisch modernisierte Fassung des [Lights-out-Spiels anlässlich der 600. Ausgabe der c’t](https://www.heise.de/ct/600/).
 
-![Screenshot](screenshot.png)
+Bei diesem Spiel musst du alle Kacheln auf dieselbe Farbe bringen, egal welche. Durch Klicken auf eine Kachel wechselt sie mit ihren Nachbarn in den nächsten von n Zuständen. Ist der n-te Zustand erreicht, gehts beim ersten wieder los.
 
+![In diesem Spiel kann jede Kachel einen von vier Zustände annehmen.](screenshot.png)
+
+Der Schwierigkeitsgrad steigt mit der Anzahl der Kacheln und Zustände. Bereits das obige Spiel mit 5 &times; 5 Feldern und 4 Zustände (dargestellt durch Grün, Geld, Rot und Blau) hat es in sich.
 
 ## Lizenz
 

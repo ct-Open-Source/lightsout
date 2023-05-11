@@ -23,56 +23,37 @@
             padding: 8px 8px 2px 8px;
         }
 
-        #game {
-            padding: 8px;
-            margin: 0 auto;
-            display: grid;
-        }
-
         button {
-            margin: 2px;
-            padding: 4px;
-            border: 2px solid #eee;
-            border-radius: 4px;
-            cursor: pointer;
-            color: #222;
-        }
-
-        button.light {
             width: 44px;
             height: 44px;
-            color: white;
-            font-weight: bold;
-            transition: all 450ms ease-in-out;
         }
 
-        .state-0 {
-            background-color: rgb(0, 139, 44) !important;
-            transform: rotateX(0deg) rotateY(0deg);
-        }
-
-        .state-1 {
-            background-color: rgb(200, 209, 14) !important;
-            transform: rotateX(180deg) rotateY(0deg);
-        }
-
-        .state-2 {
-            background-color: rgb(203, 46, 77) !important;
-            transform: rotateX(180deg) rotateY(180deg);
-        }
-
-        .state-3 {
-            background-color: rgb(46, 92, 185) !important;
-            transform: rotateX(0deg) rotateY(180deg);
-        }
     </style>
+    <script async src="lightsout.js"></script>
+    <script async defer src="solver.js"></script>
 </head>
 
 <body>
     <p>Mach es einfarbig!</p>
-    <p id="score">Anzahl Züge: <span id="moves"></span></p>
-    <p><button id="solve">Lösen</button></p>
-    <script async src="lightsout.js"></script>
+    <p><button id="incr">&plus;</button><button id="decr">&minus;</button></p>
+    <lightsout-game data-width="5" data-height="5" data-states="2"></lightsout-game>
+    <script>
+        const game = document.querySelector('lightsout-game');
+        const incrButton = document.querySelector('#incr');
+        incrButton.addEventListener('click', () => {
+            const w = parseInt(game.getAttribute('data-width'));
+            game.setAttribute('data-width', w + 1);
+            const h = parseInt(game.getAttribute('data-height'));
+            game.setAttribute('data-height', h + 1);
+        });
+        const decrButton = document.querySelector('#decr');
+        decrButton.addEventListener('click', () => {
+            const w = parseInt(game.getAttribute('data-width'));
+            game.setAttribute('data-width', Math.max(5, w - 1));
+            const h = parseInt(game.getAttribute('data-height'));
+            game.setAttribute('data-height', Math.max(5, h - 1));
+        });
+    </script>
 </body>
 
 </html>

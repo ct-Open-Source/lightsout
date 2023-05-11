@@ -6,7 +6,7 @@ Bei diesem Spiel musst du alle Kacheln auf dieselbe Farbe bringen, egal welche. 
 
 ![In diesem Spiel kann jede Kachel einen von vier Zustände annehmen.](screenshot.png)
 
-Der Schwierigkeitsgrad steigt mit der Anzahl der Kacheln und Zustände. Bereits das obige Spiel mit 5 &times; 5 Feldern und 4 Zustände (dargestellt durch Grün, Geld, Rot und Blau) hat es in sich.
+Der Schwierigkeitsgrad steigt mit der Anzahl der Kacheln und Zustände. Bereits das obige Spiel mit 5 &times; 5 Feldern und 4 Zuständen (dargestellt durch Grün, Geld, Rot und Blau) hat es in sich.
 
 ## Lizenz
 

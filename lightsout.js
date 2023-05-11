@@ -247,6 +247,8 @@
             }
             const move = solution.shift();
             this.press(move.i, move.j);
+            ++this.move_count;
+            this.update();
             setTimeout(() => this.playSolution(solution), 500);
         }
 
@@ -279,6 +281,7 @@
             }
             this.solve_button.textContent = 'Abbrechen';
             this.gameState = State.SOLVING;
+            this.move_count = 0;
             this.playSolution(solution_clicks);
         }
 
